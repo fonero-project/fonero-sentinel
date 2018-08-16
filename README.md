@@ -27,6 +27,15 @@ Clone the Sentinel repo and install Python dependencies.
     cd fonero-sentinel && \
     virtualenv ./venv && \
     ./venv/bin/pip install -r requirements.txt
+    
+Add string to config file /root/.fonerocore/fonero.conf
+
+    daemon=1
+    server=1
+    listen=1
+    rpcpassword=PASSWORD
+    rpcport=19192
+    rpcallowip=127.0.0.1
 
 ### 3. Set up Cron
 
