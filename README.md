@@ -17,6 +17,43 @@ Make sure Python version 2.7.x or above is installed:
     python --version
 
 ### 2. Install Sentinel
+    
+Add string to config file /root/.fonerocore/fonero.conf
+
+    daemon=1
+    server=1
+    listen=1
+    masternode=1
+    masternodeprivkey=PRIVKEY
+    externalip=IP
+    rpcuser=USER
+    rpcpassword=PASSWORD
+    rpcport=19192
+    rpcallowip=127.0.0.1
+    addnode=85.10.194.14:19190
+    addnode=188.40.62.51:19190
+    addnode=37.9.52.254:19190
+    addnode=37.9.52.253:19190
+    addnode=37.9.52.252:19190
+    addnode=37.9.52.17:19190
+    addnode=37.9.52.16:19190
+    addnode=5.188.205.146:19190
+    addnode=5.188.205.112:19190
+    addnode=5.188.204.7:19190
+    addnode=5.188.204.5:19190
+    addnode=5.188.204.4:19190
+    addnode=5.188.204.3:19190
+    addnode=5.188.63.248:19190
+    addnode=5.188.63.247:19190
+    addnode=5.188.63.102:19190
+    addnode=5.188.63.50:19190
+
+Kill fonerod and restart
+ 
+    $ ./fonero-cli stop
+    $ ./fonerod
+
+Wait 10 min.
 
 Clone the Sentinel repo and install Python dependencies.
 
@@ -28,15 +65,6 @@ Clone the Sentinel repo and install Python dependencies.
     virtualenv ./venv && \
     ./venv/bin/pip install -r requirements.txt
     
-Add string to config file /root/.fonerocore/fonero.conf
-
-    daemon=1
-    server=1
-    listen=1
-    rpcpassword=PASSWORD
-    rpcport=19192
-    rpcallowip=127.0.0.1
-
 ### 3. Set up Cron
 
 Set up a crontab entry to call Sentinel every minute:
